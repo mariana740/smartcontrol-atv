@@ -163,34 +163,32 @@ form button[type="submit"] {
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
-form button[type="submit"]:hover {
+ form button[type="submit"]:hover {
     transform: scale(1.03);
     background-color: #001a40;
-}
 
-/* Botão "Criar nova conta" */
-form:nth-of-type(2) button {
+}
+ /*Botão "criar nova conta"*/
+ form:nth-of-type(2) bottom {
     width: 100%;
     padding: 12px;
-    background-color: transparent;
-    color: var(--secondary-blue);
-    border: 1px solid var(--secondary-blue);
+    background-color:transparent;
+    color:var(--secomday-blue);
     border-radius: 8px;
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
+    transition: transform 0.2s ease, background-color 0.2 ease;
+ }
 
-form:nth-of-type(2) button:hover {
-    transform: scale(1.03);
-    background-color: #f0f7ff;
-}
-
-/* Botão de Áudio lateral */
-body > p > button {
-    position: fixed;
-    right: 20px;
+ form:nth_of_type(2) button:hover {
+  transform:scale(1.03);
+  background-color:#f0f7ff;
+ }
+ /* Botão de Áudio lateral*/
+  boody > p > button {
+    position:fixed;
+    right:20px;
     bottom: 80px;
     padding: 10px 15px;
     background-color: #00a2ff;
@@ -200,17 +198,31 @@ body > p > button {
     cursor: pointer;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: tranform 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
  body > p > button:hover {
     transform: scale(1.1);
  }
+/*6.Rodapé (footer)*/
 
-    
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 12px 8%;
+    font-size: 0.85rem;
+    color: var(--primary-blue);
+}
 
+footer a {
+    color: var(--secondary-blue);
+    font-weight: bold;
+    text-decoration: none;
+}
 
-
-
-
-  
+footer a:hover {
+    text-decoration: underline;
+}
