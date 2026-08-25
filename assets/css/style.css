@@ -8,8 +8,8 @@
   body {
     display: flex;
     min-height: 90vh;
-    background-color: #e3f0fd;
-    color: #0b2545;
+    background-color: #080c11;
+    color: #387ad1;
     position: relative;
     overflow-x: hidden;
   }
@@ -25,7 +25,7 @@
   header h1 {
     font-size: 2.0rem;
     font-weight: 600;
-    color: #031b4e;
+    color: #000000;
     margin-bottom: 15px;
   }
   
@@ -62,7 +62,7 @@
   
   main {
     width: 65%;
-    background-color: #ffffff;
+    background-color: #ffff;
     border-top-left-radius: 12%;
     border-bottom-left-radius: 25px;
     padding: 100px 80px;

@@ -6,10 +6,10 @@
 }
 
 :root {
-    --fundo: #dbeeff;                  
-    --fundo2: #002b66;
-    --fundo-menu: #ffffff;
-    --titulo: #4a80db;       
+    --fundo: #d6e2e7;                  
+    --fundo2: #083699;
+    --fundo-menu: #eff2fa;
+    --titulo: #3a5788;       
     --texto: #1e293b;        
     --sombra: rgba(0, 0, 0, 0.08); 
 }
@@ -73,7 +73,7 @@ header button[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: width 0.3s ease;
+    transition:  0.3s ease;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -149,32 +149,12 @@ header button[type="submit"] {
     color: #002b66;
 }
 
-.navbar button {
-    margin-top: auto;
-    background-color: #00a0ff;
-    border: none;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 0; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 160, 255, 0.4);
-    margin-left: 10px;
-}
-
-.navbar button::after {
-    content: "🔊";
-    font-size: 16px;
-}
 
 main {
     margin-top: 75px;
     margin-left: 90px;
     padding: 30px 40px;
-    color: #556b82;
+    color: var(--fundo2);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -218,14 +198,14 @@ main > img {
 .card p:last-child {
     font-size: 3rem;
     font-weight: 800;
-    color: #002b66;
+    color: #0c3f86;
     margin: 0;
 }
 
 footer {
     margin-left: 90px;
-    background-color: var(--fundo2);
-    color: white;
+    background-color: var(--fundo);
+    color: var(--fundo2);
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -238,6 +218,23 @@ footer iframe {
 }
 
 @media (max-width: 768px) {
+    hearder {
+        left: 0;
+        padding: 0 20px;
+    }
+    .navbar {
+  width: 60px;
+    }
+    .navbar:hover,
+    .navbar:focus-within {
+ width: 200px;
+    }
 
-  
+    main {
+    margin: left 60px;
+    grid-template-columns: 1fr;
+    padding:20px;
+    }
+ 
+
 }

@@ -1,11 +1,11 @@
 function textoMensagemBoasVindas() {
-    let usuario = prompt("Digite seu Nome Completo:");
-    if (usuario  === "") {
-        usuario = "Usuário";
+    let nomeUsuario = prompt("Digite seu Nome Completo:");
+    if (nomeUsuario  === "") {
+        nomeUsuario = "Usuário";
     }
     const atual = new Date();
     const diaSemana = ["Domingo","Segunda-Feira","Terça-Feira","Quarta-Feira","Quinta-Feira","Sexta-Feira","Sábado"];
-    const textoSemana = diasSemana[atual.getDay()];
+    const textoSemana = diaSemana[atual.getDay()];
     let dia = String(atual.getDate());
     if (atual.getDate() < 10) {
         dia = "0" + dias;
@@ -25,7 +25,7 @@ function textoMensagemBoasVindas() {
     }
     const fuso = "-03:00";
     const atualmente = ` ${textoSemana}, ${dia}/${mes}/${ano} - ${horas}:${minutos} (${fuso}) `;
-    const texto = ` Olá, ${usuario}! Hoje é ${atualmente} `;
+    const texto = ` Olá, ${nomeUsuario}! Hoje é ${atualmente} `;
     const formularioLogout = document.querySelector("header form");
     if (formularioLogout) {
         formularioLogout.childNodes[0].textContent = texto + " ";
@@ -33,3 +33,4 @@ function textoMensagemBoasVindas() {
     console.log(texto);
 }
 textoMensagemBoasVindas();
+
