@@ -1,33 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>atividade10</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <title>Dashboard</title>
 </head>
 <body>
-    
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><dashboard class="html"></dashboard></title>
-</head>
-<body>
-    <P>Smart Control</P>
-    <p> Bem-Vindo, jose bezerra!
-    <a href="index.html"><button type="button">Logout</button></a>
-    <p>Acompanhe os principais indicadores do sistema</p>
-
-    <nav class="navbar">
-        <ul class="main-menu">
-            <li><a href="relatoriosmensais.html">Relatórios Mensais</a></li>
-            <li><a href="temporeal.html">Relatórios em tempo real</a></li>
-            <li><a href="config.html">Configurações</a></li>
-        <p></p><button>Audio</button>    
-    </nav>
+    <header>
+        <img src="assets/imagens/logo.png" >
+        <form method="get" action="index.html">
+            Bem-vindo! <button type="submit">Logout</button></form>
+    </header>
+    <main>
+        <input type="text" id="campoBusca">
+        <p>Visão Geral</p>
+        <img src="assets/imagens/grafico1.png">
+        <img src="assets/imagens/grafico2.png">
+        <img src="assets/imagens/grafico3.png">
+        <div class="card">
+            <p>Alertas Ativos</p>
+            <p>33</p>
+        </div>
+        <div class="card">
+            <p>Dispositivos Conectados</p>
+            <p>21</p>
+        </div>
+        <div class="card">
+            <p>Manutenção Pendente</p>
+            <p>7</p>
+        </div>
+        <nav class="navbar" tabindex="0">
+            <ul class="main-menu">
+                <li class="dropdown">
+                    Menu
+                    <ol class="sub-menu">
+                        <li><a href="relatorio.HTML">Relatórios Mensais</a></li>
+                        <li><a href="reltemporeal.html">Relatórios em tempo real</a></li>
+                    </ol>
+                <p></p><button>Audio</button>
+        </nav>
+    </main>
+    <footer>
+        <p>Sede da Empresa</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15647.198948564112!2d142.18926606178334!3d11.349333259574765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x67328f3cd57de715%3A0x1bbe64e7a21aa7fc!2sFossa%20das%20Marianas!5e0!3m2!1spt-BR!2sbr!4v1785241440366!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </footer>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>  
-</body>
-</html>
+

@@ -1,228 +1,224 @@
- 
- /* 1. VARÇÃO DAS CORES E RESET*/
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
-  :root {
-        --bg-left: #dbeeff;  /* Azul claro de fundo esquerdo */
-        --bg-card: #ffffff;   /* Card branco ha direita */
-        --primary-blue: #002b66;  /* Azul escuro nos (títulos e botão Entrar) */
-        --secondary-blue: #2a61b3; /* Azul médio nos (links e bordas) */
-        --text-color: #333333;  /* Cor base do texto*/
-        --border-color: #cccccc;  /* Borda relacionadas aos campos */
-
-        --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-     }
-
-     *{
-
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Arial, sans-serif;
-     }
-    
-
-    /* 2. ESTRUTURA GERAL DO (LAYOUT DUPLO)*/
-
-     body { 
-
-       display:flex;
-       min-height: 100vh;
-       background-color: var(--bg-left);
-       padding-bottom: 50px; /*espaço para footer
-       /*
-       position:relative;
-
-     }  
-
-    /*Lado Esquerdo (BOAS VINDAS)*/
-    body > p:nth-of-type(1),
-body > p:nth-of-type(2),
-body > p:nth-of-type(3) {
-    position: absolute;
-    left: 8%;
 }
 
-body > p:nth-of-type(1) {
-    top: 20%;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--primary-blue);
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #e3f0fd;
+  color: #0b2545;
+  position: relative;
+  overflow-x: hidden;
 }
 
-body > p:nth-of-type(2) {
-    top: 28%;
-    font-size: 1.2rem;
-    color: var(--secondary-blue);
-    font-weight: 600;
+header {
+  width: 60%;
+  padding: 60px 40px 100px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-body > p:nth-of-type(3) {
-    top: 38%;
-    max-width: 280px;
-    font-size: 0.95rem;
-    color: var(--primary-blue);
-    line-height: 1.4;
+header h1 {
+  font-size: 2.0rem;
+  font-weight: 600;
+  color: #031b4e;
+  margin-bottom: 14px;
 }
 
-/* 3 CONTANER/CARD DIREITO (FORMULÁRIO)*/
-/* Agrupa a logo, form e botão de criar conta n carde branco */
-
-img {
-    position:absolute;
-    right: 25%;
-    top: 10%;
-    max-width: 160%;
-    z-index: 2;
-}
-form:first-of-type {
-   background-color: var(--bg-card); 
-   width: 420;
-   margin-left: auto;
-   margin-right: 5%;
-   margin-top: 140px;
-   padding: 40px 35px 20px 35px;
-   border-radius: 12px 12px 0 0;
-   box-shadow: var(--shadow);
-}
- /* A Forma de Criar Conta Encostado no de Baixo */
-
- form:nth-of-type(2) {
-    background-color: var(--bg-card);
-    width: 420px;
-    margin-left: auto;
-    margin-right: 5%;
-    padding: 0 35px 35px 35px;
-    border-radius: 0 0 12px 12px;
-    box-shadow: var(--shadow);
+header h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #1d3557;
+  margin-bottom: 25px;
+  position: relative;
 }
 
-/* 4.CAMPOS DE TEXTO E HOUVER DE MOVIMENTO*/
-form p:first-child {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--primary-blue);
-    margin-bottom: 15px;
+header h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #a8dadc;
+  margin-top: 18px;
 }
 
-label {
-    display: block;
-    font-weight: 600;
-    color: var(--primary-blue);
-    margin-top: 12px;
-    margin-bottom: 5px;
-    font-size: 0.9rem;
+header p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #1d3557;
+  max-width: 280px;
+  margin-bottom: 50px;
 }
 
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    outline: none;
-    font-size: 0.95rem;
-    /* Animação suave para o movimento */
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-/* Efeito de aumento ao passar o mouse ou focar no input */
-input[type="email"]:hover,
-input[type="password"]:hover,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    transform: scale(1.02);
-    border-color: var(--secondary-blue);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+header img {
+  max-width: 120px;
+  height: auto;
+  margin-top: auto;
 }
 
-/* Link Esqueceu a Senha */
+main {
+  width: 40%;
+  background-color: #ffffff;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 50px 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+main h1 {
+  font-size: 1.6rem;
+  color: #031b4e;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 380px;
+  text-align: left;
+}
+
+form {
+  width: 100%;
+  max-width: 390px;
+}
+
+form p {
+  margin-bottom: 8px;
+}
+
+form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #031b4e;
+}
+
+form input {
+  width: 100%;
+  padding: 14px 14px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #031b4e;
+}
+
+form p:has(a) {
+  text-align: right;
+  margin-top: -5px;
+  margin-bottom: 25px;
+}
+
 form a {
-    display: block;
-    text-align: right;
-    color: var(--secondary-blue);
-    text-decoration: none;
-    font-size: 0.85rem;
-    margin: 8px 0 20px 0;
+  color: #031b4e;
+  font-size: 0.85rem;
+  text-decoration: none;
 }
 
 form a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
-/*5 BOTÕES E MOVIMENTO (HOUVER)*/
-/* Botão "Entrar" */
 
 form button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: var(--primary-blue);
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
- form button[type="submit"]:hover {
-    transform: scale(1.03);
-    background-color: #001a40;
-
-}
- /*Botão "criar nova conta"*/
- form:nth-of-type(2) bottom {
-    width: 100%;
-    padding: 12px;
-    background-color:transparent;
-    color:var(--secomday-blue);
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2 ease;
- }
-
- form:nth_of_type(2) button:hover {
-  transform:scale(1.03);
-  background-color:#f0f7ff;
- }
- /* Botão de Áudio lateral*/
-  boody > p > button {
-    position:fixed;
-    right:20px;
-    bottom: 80px;
-    padding: 10px 15px;
-    background-color: #00a2ff;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease;
+  width: 100%;
+  padding: 14px;
+  background-color: #031b4e;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
- body > p > button:hover {
-    transform: scale(1.1);
- }
-/*6.Rodapé (footer)*/
+form button[type="submit"]:hover {
+  background-color: #000f30;
+}
+
+
+main > p:has(a[href="cadastro.html"]) {
+  width: 100%;
+  max-width: 380px;
+  margin-top: 25px;
+  position: relative;
+  text-align: center;
+}
+
+main > p:has(a[href="cadastro.html"])::before {
+  content: '';
+  position: absolute;
+  top: -28px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e1e4e8;
+}
+
+main a[href="cadastro.html"] {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+main a[href="cadastro.html"] button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  color: #031b4e;
+  border: 1px solid #031b4e;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  top: -18px;
+  left: 0;
+  transition: background-color 0.2s;
+}
+
+main a[href="cadastro.html"] button:hover {
+  background-color: #f0f4f9;
+}
+
+main > p button {
+  background-color: #0099ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 0.70rem;
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
+
+}
+
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: 12px 8%;
-    font-size: 0.85rem;
-    color: var(--primary-blue);
+  position: absolute;
+  bottom: 16px;
+  left: 30px;
+  font-size: 0.95rem;
+  color: #1d3557;
 }
 
 footer a {
-    color: var(--secondary-blue);
-    font-weight: bold;
-    text-decoration: none;
+  color: #0056b3;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
