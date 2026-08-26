@@ -8,8 +8,8 @@
   body {
     display: flex;
     min-height: 90vh;
-    background-color: #080c11;
-    color: #387ad1;
+    background-color: #bed5ec;
+    color: #010102;
     position: relative;
     overflow-x: hidden;
   }
@@ -25,7 +25,7 @@
   header h1 {
     font-size: 2.0rem;
     font-weight: 600;
-    color: #000000;
+    color: #030303;
     margin-bottom: 15px;
   }
   
@@ -53,7 +53,7 @@
     max-width: 280px;
     margin-bottom: 40px;
   }
-  
+
   header img {
     max-width: 150px;
     height: auto;
