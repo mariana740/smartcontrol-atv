@@ -13,7 +13,21 @@
             Bem-vindo! <button type="submit">Logout</button></form>
     </header>
     <main>
-        <input type="text" id="campoBusca">
+        <input type="text" id="campoBusca"
+        placeholder="campoBusca"...>
+        <div class="item-pesquisavel">
+           <p>Alertas Ativos</p>
+    <p>33</p>
+</div>
+<div class="card item-pesquisavel">
+    <p>Dispositivos Conectados</p>
+    <p>21</p>
+</div>
+<div class="card item-pesquisavel">
+    <p>Manutenção Pendente</p>
+    <p>7</p>
+</div>  
+        </div>
         <p>Visão Geral</p>
         <img src="assets/imagens/grafico1.png">
         <img src="assets/imagens/grafico2.png">
@@ -31,14 +45,17 @@
             <p>7</p>
         </div>
         <nav class="navbar" tabindex="0">
-            <ul class="main-menu">
-                <li class="dropdown">
+           <ul class="main-menu">
+            <li class="dropdown">
                     Menu
                     <ol class="sub-menu">
+                           <li class="item-pesquisavel"><a href="relatorio.HTML">Relatórios Mensais</a></li>
+            <li class="item-pesquisavel"><a href="reltemporeal.html">Relatórios em tempo real</a></li>
                         <li><a href="relatorio.HTML">Relatórios Mensais</a></li>
                         <li><a href="reltemporeal.html">Relatórios em tempo real</a></li>
                     </ol>
-                    <li>..
+                    <li>
+                  <ul>
         </nav>
     </main>
     <footer>

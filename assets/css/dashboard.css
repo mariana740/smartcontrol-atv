@@ -8,13 +8,13 @@
 
 :root {
   --azul-principal: #002b66;
-  --azul-claro: #a4c9e7;
+  --azul-claro: #d1deeb;
   --azul-titulo: #5882a8;
   --azul-cards-rapidos: #a5c7e1;
   --azul-icone-audio: #030303;
   --branco: #ffffff;
   --texto-escuro: #0b2341;
-  --texto-secundario: #64748b;
+  --texto-secundario: #5176a8;
   --sombra: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
@@ -169,7 +169,8 @@ main > p:first-child::after {
   font-size: 16px;
   font-weight: normal;
   color: var(--texto-secundario);
-  margin-top: 4px;
+  margin-top: 4px; 
+  
 }
 
 main img[src*="grafico1"] {
