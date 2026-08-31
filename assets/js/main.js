@@ -45,3 +45,26 @@ function textoMensagemBoasVindas() {
 } 
 
 textoMensagemBoasVindas();
+
+//campoBusca//
+document.addEventListener("DOMContentLoaded", () => {
+    const campoBusca = document.querySelector("#campo-busca");
+    const linhasTabela = document.querySelectorAll("tbody tr");
+
+    if (campoBusca && linhasTabela.length > 0) {
+        campoBusca.addEventListener("input", () => {
+            const termoBusca = campoBusca.value.toLowerCase().trim();
+
+            linhasTabela.forEach((linha) => {
+                const textoLinha = linha.textContent.toLowerCase();
+                
+                // Exibe a linha se contiver o termo da busca, ou oculta caso contrário
+                if (textoLinha.includes(termoBusca)) {
+                    linha.style.display = "";
+                } else {
+                    linha.style.display = "none";
+                }
+            });
+        });
+    }
+});
