@@ -28,12 +28,12 @@ function textoMensagemBoasVindas() {
     let minutos = String(atual.getMinutes());
     if (atual.getMinutes() < 10) {
         minutos = "0" + minutos;
-    }
+    
 
     const fuso = "-03:00";
-    const dataAtual =  ${SemanaToda}, ${dia}/${mes}/${ano} - ${horas}:${minutos} (${FusoHorario}) ` ;
-    const texto =  ` Olá, ${nomeUsuario}! Hoje é ${atualmente} ;
-
+    const dataAtual = ` ${textoSemana}, ${dia}/${mes}/${ano} - ${horas}:${minutos} (${fuso}) ` ;
+    const texto =  ` Olá, ${nomeUsuario}! Hoje é ${dataAtual} `;
+}
 
 
     const formularioLogout = document.querySelector("header form");
@@ -42,6 +42,6 @@ function textoMensagemBoasVindas() {
     }
 
     console.log(texto);
-}
+} 
 
 textoMensagemBoasVindas();

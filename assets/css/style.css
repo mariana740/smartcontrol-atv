@@ -8,7 +8,7 @@
   body {
     display: flex;
     min-height: 90vh;
-    background-color: #c7dbf0;
+    background-color: #9cc1eb;
     color: #010102;
     position: relative;
     overflow-x: hidden;
@@ -32,7 +32,7 @@
   header h2 {
     font-size: 1.4rem;
     font-weight: 500;
-    color: #1d3557;
+    color: #6c9de0;
     margin-bottom: 25px;
     position: relative;
   }
@@ -199,6 +199,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
   
+
   footer {
     position: absolute;
     bottom: 20px;
@@ -228,5 +229,5 @@
     right: 35px;
     bottom: 35px;
   }
-  
 
+ 
