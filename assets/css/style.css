@@ -1,5 +1,5 @@
 
-   *{ margin: 0;
+ *{ margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,7 +8,7 @@
   body {
     display: flex;
     min-height: 90vh;
-    background-color: #b2cff1;
+    background-color: #bfd1e4;
     color: #010102;
     position: relative;
     overflow-x: hidden;
@@ -229,5 +229,3 @@
     right: 35px;
     bottom: 35px;
   }
-
- 

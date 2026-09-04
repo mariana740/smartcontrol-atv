@@ -1,5 +1,4 @@
-
-*{
+ *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,8 +6,8 @@
 }
 
 :root {
-  --azul-principal: #002b66;
-  --azul-claro: #c0d7f0;
+  --azul-principal: #062d64;
+  --azul-claro: #abcaeb;
   --azul-titulo: #5882a8;
   --azul-cards-rapidos: #a5c7e1;
   --azul-icone-audio: #030303;
@@ -405,7 +404,91 @@ main {
   display: flex;
   flex-direction: column;
 }
+/* --- Variáveis de Tema --- */
+:root {
+    --bg-primary: #3f3434;
+    --text-primary: #254b70;
+    --bg-navbar: #0a5bac;
+    --border-color: #dee2e6;
+    --bg-sidebar: #ffffff;
+}
 
+/*Regras aplicadas quando a classe .dark-theme é adicionada ao <body> */
+body.dark-theme {
+    --bg-primary: #121212;
+    --text-primary: #f8f9fa;
+    --bg-navbar: #1e1e1e;
+    --border-color: #333333;
+    --bg-sidebar: #1e1e1e;
+}
+
+/* Transições suaves ao alternar o tema */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--bg-navbar);
+    border-bottom: 8px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+/* --- Estilos da Sidebar (Menu Lateral) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Escondido fora da tela à esquerda por padrão */
+    width: 250px;
+    height: 100%;
+    background-color: var(--bg-sidebar);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    transition: left 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Classe utilitária para exibir a sidebar */
+.sidebar.active {
+    left: 0; /* Desliza para dentro da tela */
+}
+
+/* Overlay para escurecer o fundo ao abrir a sidebar */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.sidebar-links li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: block;
+    padding: 0.75rem 0;
+}
 main > p:first-child {
   order: 1; 
 }
@@ -429,8 +512,6 @@ main p:nth-of-type(5) { order: 9; margin-bottom: 20px; }
 main p:nth-of-type(6) { order: 10; margin-bottom: -125px; }
 main p:nth-of-type(7) { order: 11; margin-bottom: 20px; }
 
-footer {
-  margin-left:  0; 
-  padding: 20px 15px;
+
 }
-}
+

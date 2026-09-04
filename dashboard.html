@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,85 +7,99 @@
     <title>Dashboard</title>
 </head>
 <body>
+
+    <!-- Cabeçalho Principal -->
     <header>
-        <img src="assets/imagens/logo.png" >
+        <img src="assets/imagens/logo.png" alt="Logo da Empresa">
         <form method="get" action="index.html">
-            Bem-vindo! <button type="submit">Logout</button></form>
+            <span>Bem-vindo!</span>
+            <button type="submit">Logout</button>
+        </form>
     </header>
+
+    <!-- Overlay e Menu Lateral (Sidebar) -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <aside id="sidebar" class="sidebar">
+        <h3>Menu</h3>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="nav-link">Dispositivos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Configurações</a></li>
+            <li class="nav-item"><a href="relatorio.HTML" class="nav-link">Relatórios Mensais</a></li>
+            <li class="nav-item"><a href="reltemporeal.html" class="nav-link">Relatórios em tempo real</a></li>
+        </ul>
+    </aside>
+
+    <!-- Conteúdo Principal -->
     <main>
-        <input type="text" id="campoBusca"
-        placeholder="Pesqusar:"...>
-        <div class="item-pesquisavel">
-           <p>Alertas Ativos</p>
-    <p>33</p>
-</div>
-<div class="card item-pesquisavel">
-    <p>Dispositivos Conectados</p>
-    <p>21</p>
-</div>
-<div class="card item-pesquisavel">
-    <p>Manutenção Pendente</p>
-    <p>7</p>
-</div>  
-        </div>
-        <p>Visão Geral</p>
-        <img src="assets/imagens/grafico1.png">
-        <img src="assets/imagens/grafico2.png">
-        <img src="assets/imagens/grafico3.png">
-        <div class="card">
-            <p>Alertas Ativos</p>
-            <p>33</p>
-        </div>
-        <div class="card">
-            <p>Dispositivos Conectados</p>
-            <p>20</p>
-        </div>
-        <div class="card">
-            <p>Manutenção Pendente</p>
-            <p>7</p>
-        </div>
-        <nav class="navbar" tabindex="0">
-           <ul class="main-menu">
-            <li class="dropdown">
-                    Menu
-                    <ol class="sub-menu">
-                           <li class="item-pesquisavel"><a href="relatorio.HTML">Relatórios Mensais</a></li>
-            <li class="item-pesquisavel"><a href="reltemporeal.html">Relatórios em tempo real</a></li>
-                        <li><a href="relatorio.HTML">Relatórios Mensais</a></li>
-                        <li><a href="reltemporeal.html">Relatórios em tempo real</a></li>
-                    </ol>
-                    <li>
-                  <ul>
+        <!-- Barra de Ações / Busca -->
+        <nav class="navbar">
+            <button id="menu-toggle" class="btn btn-outline-primary d-md-none">☰ Menu</button>
+            <input type="search" id="campoBusca" placeholder="Buscar dispositivos, itens...">
+            <button id="theme-toggle" class="btn btn-secondary">Dark Mode</button>
         </nav>
+
+        <!-- Indicadores / Cards de Resumo -->
+        <section class="cards-section">
+            <div class="card item-pesquisavel">
+                <p>Alertas Ativos</p>
+                <p>33</p>
+            </div>
+            <div class="card item-pesquisavel">
+                <p>Dispositivos Conectados</p>
+                <p>21</p>
+            </div>
+            <div class="card item-pesquisavel">
+                <p>Manutenção Pendente</p>
+                <p>7</p>
+            </div>
+        </section>
+
+        <!-- Gráficos de Visão Geral -->
+        <section class="charts-section">
+            <h2>Visão Geral</h2>
+            <img src="assets/imagens/grafico1.png" alt="Gráfico de desempenho 1">
+            <img src="assets/imagens/grafico2.png" alt="Gráfico de desempenho 2">
+            <img src="assets/imagens/grafico3.png" alt="Gráfico de desempenho 3">
+        </section>
+
+        <!-- Tabela de Filtros de Dispositivos -->
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dispositivo</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="filterable-item">
+                        <td>Servidor Principal</td>
+                        <td>Ativo</td>
+                    </tr>
+                    <tr class="filterable-item">
+                        <td>Roteador Wi-Fi</td>
+                        <td>Inativo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
+
+    <!-- Rodapé -->
     <footer>
         <p>Sede da Empresa</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15647.198948564112!2d142.18926606178334!3d11.349333259574765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x67328f3cd57de715%3A0x1bbe64e7a21aa7fc!2sFossa%20das%20Marianas!5e0!3m2!1spt-BR!2sbr!4v1785241440366!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15647.198948564112!2d142.18926606178334!3d11.349333259574765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x67328f3cd57de715%3A0x1bbe64e7a21aa7fc!2sFossa%20das%20Marianas!5e0!3m2!1spt-BR!2sbr!4v1785241440366!5m2!1spt-BR!2sbr" 
+            width="300" 
+            height="250" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
     </footer>
+
+    <!-- Scripts JavaScript -->
     <script src="assets/js/main.js"></script>
 </body>
-</html> 
- <!-- Campo de busca -->
-<input type="text" id="campo-busca" placeholder="Digite para filtrar...">
-
-//Tabela de dados//
-<table>
-    <thead>
-        <tr>
-            <th>Dispositivo</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Roteador TP-Link</td>
-            <td>Ativo</td>
-        </tr>
-        <tr>
-            <td>Switch Cisco</td>
-            <td>Inativo</td>
-        </tr>
-    </tbody>
-</table>
-
-
+</html>

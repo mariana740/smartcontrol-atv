@@ -1,70 +1,97 @@
-function textoMensagemBoasVindas() {
-    let nomeUsuario = prompt("Digite seu Nome Completo:");
-    if (!nomeUsuario || nomeUsuario.trim() === "") {
-        nomeUsuario = "Usuário";
-    }
+ const elementoBemVindo = document.querySelector("#BemVindo");
+ const nomeUsuario = prompt("Digite seu nome completo:");
 
-    const atual = new Date();
-    const diaSemana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
-    const textoSemana = diaSemana[atual.getDay()];
 
-    let dia = String(atual.getDate());
-    if (atual.getDate() < 10) {
-        dia = "0" + dia; // Corrigido de 'dias' para 'dia'
-    }
 
-    let mes = String(atual.getMonth() + 1);
-    if (atual.getMonth() + 1 < 10) {
-        mes = "0" + mes;
-    }
+const DiasSemana = [
 
-    const ano = atual.getFullYear();
+    "Domingo", "Segunda-Feira","Terça-Feira",
+    "Quarta-Feira","Quinta-Feira", "Sexta-feira", 
+    "Sabado"
 
-    let horas = String(atual.getHours());
-    if (atual.getHours() < 10) {
-        horas = "0" + horas;
-    }
+] ;
 
-    let minutos = String(atual.getMinutes());
-    if (atual.getMinutes() < 10) {
-        minutos = "0" + minutos;
-    
 
-    const fuso = "-03:00";
-    const dataAtual = ` ${textoSemana}, ${dia}/${mes}/${ano} - ${horas}:${minutos} (${fuso}) ` ;
-    const texto =  ` Olá, ${nomeUsuario}! Hoje é ${dataAtual} `;
+
+function atualizarDataHora () {
+const dataAtual = new Date();
+
+
+
+const diaSemana = DiasSemana[dataAtual.getDay()];
+const dia = String(dataAtual.getDate()).padStart(2, "0");
+const mes = String(dataAtual.getMonth() + 1).padStart(2,"0");
+const ano = dataAtual.getFullYear();
+
+
+
+
+const hora = String(dataAtual.getHours()).padStart(2,"0");
+const minuto = String(dataAtual.getMinutes()).padStart(2,"0");
+const segundo = String(dataAtual.getSeconds()).padStart(2, "0");
+
+
+
+elementoBemVindo.textContent =
+    'Olá, ${nomeUsuario}! Hoje é ${diaSemana} - ${hora}: ${minuto}: ${segundo}';
+
+
+elementoBemVindo.style.color = "#ffffff";
+
+
 }
 
 
-    const formularioLogout = document.querySelector("header form");
-    if (formularioLogout) {
-        formularioLogout.childNodes[0].textContent = texto + " ";
+atualizarDataHora();
+
+
+setInterval(AtualizarDataHora, 1000);
+
+   const btnTema = document.getElementById('btnTema');
+   
+    if (btnTema) {
+        btnTema.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const ehEscuro = document.body.classList.contains('dark-theme');
+            btnTema.textContent = ehEscuro ? 'Light Mode' : 'Dark Mode';
+        });
     }
 
-    console.log(texto);
-} 
 
-textoMensagemBoasVindas();
+   
+    const campoBusca = document.getElementById('campoBusca');
+    const formBusca = document.getElementById('formBusca');
+    const linhas = document.querySelectorAll('#tabelaDispositivos tbody tr');
 
-//campoBusca//
-document.addEventListener("DOMContentLoaded", () => {
-    const campoBusca = document.querySelector("#campo-busca");
-    const linhasTabela = document.querySelectorAll("tbody tr");
 
-    if (campoBusca && linhasTabela.length > 0) {
-        campoBusca.addEventListener("input", () => {
-            const termoBusca = campoBusca.value.toLowerCase().trim();
+   
+    if (formBusca) {
+        formBusca.addEventListener('submit', (e) => e.preventDefault());
+    }
 
-            linhasTabela.forEach((linha) => {
-                const textoLinha = linha.textContent.toLowerCase();
-                
-                // Exibe a linha se contiver o termo da busca, ou oculta caso contrário
-                if (textoLinha.includes(termoBusca)) {
-                    linha.style.display = "";
-                } else {
-                    linha.style.display = "none";
-                }
+
+    if (campoBusca) {
+        campoBusca.addEventListener('input', (e) => {
+            const termo = e.target.value.toLowerCase();
+           
+            linhas.forEach(linha => {
+                const texto = linha.textContent.toLowerCase();
+                linha.style.display = texto.includes(termo) ? '' : 'none';
             });
         });
     }
-});
+
+
+   
+    const btnMenuToggle = document.getElementById('btnMenuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+
+    if (btnMenuToggle && sidebar) {
+        btnMenuToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            sidebar.classList.toggle('active');
+        });
+    }
+;
+
