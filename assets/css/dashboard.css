@@ -3,12 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-
-}
-:root{
-  --b-header: #0B2545;
-  --bg-sidebar: #FFFFFF;
-  --bg-main: #EAF4FC;
+ }
+:root {
+  --bg-header: #0B2545;
+  --bg-sidebar: #ffff;
+  --bg-main: #023c6b;
   --card-bg: #FFFFFF;
   --blue-accent: #2A72D7;
   --blue-light: #90C2EC;
@@ -16,16 +15,14 @@
   --text-muted: #555555;
 }
 
-.bar{
+body{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-body 
-{
+body {
   display: flex;
   height: 100vh;
   overflow: hidden;

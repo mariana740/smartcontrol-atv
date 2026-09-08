@@ -1,0 +1,336 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #dce9f9;
+    transition: 0.3s ease;
+}
+
+.sidebar {
+    width: 90px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 25px;
+    flex-shrink: 0;
+    transition: 0.3s ease;
+}
+
+.sidebar img {
+    width: 45px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #1a2a5e;
+    cursor: pointer;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    background-color: #14225a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.btn-modo-escuro {
+    padding: 8px 20px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-modo-escuro:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-voltar {
+    padding: 10px 24px;
+    background-color: #ffffff;
+    color: #1a2a5e;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #eef3fb;
+}
+
+/* MAIN AJUSTADO PARA EMPILHAR OS ELEMENTOS */
+main {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Garante que os cards ocupem 100% da largura */
+    gap: 25px;            /* Espaçamento vertical entre os elementos */
+    width: 100%;
+}
+
+main h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a2a5e;
+    margin-bottom: 5px;
+}
+
+/* CARDS CONFIGURADOS PARA OCUPAR LARGURA TOTAL EM BLOCO */
+.card {
+    background-color: #ffffff;
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+}
+
+/* TABELA DENTRO DO CARD EXPANDIDA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a2a5e;
+    padding-bottom: 15px;
+    caption-side: top;
+}
+
+thead th {
+    color: #1a2a5e;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    padding: 8px 20px 8px 0;
+}
+
+tbody td {
+    text-align: left;
+    padding: 10px 20px 10px 0;
+    font-size: 14px;
+    color: #333;
+    border-top: 1px solid #eef1f6;
+}
+
+tbody td:first-child {
+    font-weight: 600;
+    color: #1a2a5e;
+}
+
+/* CARD DO GRÁFICO EMPILHADO */
+.card-grafico {
+    display: block;
+    width: 100%;
+    max-width: none;
+}
+
+.grafico-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.grafico-header h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a2a5e;
+}
+
+.legenda {
+    display: flex;
+    gap: 15px;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #333;
+}
+
+.bolinha {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.bolinha-2024 {
+    background-color: #0d1c4a;
+}
+
+.bolinha-2023 {
+    background-color: #7ab8e8;
+}
+
+.grafico-svg {
+    width: 100%;
+    height: auto;
+}
+
+.eixo-label,
+.eixo-label-x {
+    font-size: 11px;
+    fill: #7a828e;
+}
+
+.valor-label {
+    font-size: 12px;
+    font-weight: 700;
+    fill: #1a2a5e;
+    text-anchor: middle;
+}
+
+/* TEMA ESCURO */
+body.dark-theme {
+    background-color: #0f1729;
+}
+
+body.dark-theme .sidebar {
+    background-color: #1a2438;
+}
+
+body.dark-theme .card {
+    background-color: #1a2438;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme main h1,
+body.dark-theme caption,
+body.dark-theme thead th,
+body.dark-theme tbody td:first-child,
+body.dark-theme .grafico-header h2 {
+    color: #e8ecf5;
+}
+
+body.dark-theme tbody td {
+    color: #c5cbe0;
+    border-top-color: #2a3550;
+}
+
+body.dark-theme .legenda-item {
+    color: #c5cbe0;
+}
+
+body.dark-theme .btn-voltar {
+    background-color: #e8ecf5;
+    color: #14225a;
+}
+
+body.dark-theme .btn-voltar:hover {
+    background-color: #d5dbea;
+}
+
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        order: -1;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        gap: 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .sidebar img {
+        width: 36px;
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+    }
+
+    .content-wrapper {
+        width: 100%;
+    }
+
+    .topbar {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 20px;
+        justify-content: center;
+    }
+
+    .btn-modo-escuro {
+        order: 2;
+        padding: 7px 16px;
+        font-size: 12px;
+    }
+
+    .btn-voltar {
+        order: 1;
+        width: 100%;
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .card {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    caption {
+        font-size: 16px;
+        padding-bottom: 12px;
+    }
+
+    thead th {
+        font-size: 12px;
+        padding: 6px 14px 6px 0;
+    }
+
+    tbody td {
+        font-size: 13px;
+        padding: 8px 14px 8px 0;
+    }
+}
