@@ -1,7 +1,7 @@
  const elementoBemVindo = document.querySelector("#BemVindo");
  const nomeUsuario = prompt("Digite seu nome completo:");
 
-
+ 
 
 const DiasSemana = [
 

@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/esqueceusenha.css">
+    <title>Esqueceu Senha</title>
+</head>
+<body>
+    <main>
+        <form method="get" action="index.html" id="form-senha" novalidate>
+            <p>Criar sua nova senha</p>
+
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite o E-mail" required>
+            <span class="erro" id="erro-email"></span>
+
+            <label for="senha">Digite sua nova senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite a Senha" required minlength="8">
+            <span class="erro" id="erro-senha"></span>
+
+            <label for="confirmar_senha">Confirme sua nova senha</label>
+            <input type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Digite a Senha" required minlength="8">
+            <span class="erro" id="erro-confirmar"></span>
+
+            <button type="submit" id="btn-criar">Criar</button>
+        </form>
+    </main>
+
+    <script src="assets/js/esqueceusenha.js"></script>
+</body>
+</html>
