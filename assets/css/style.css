@@ -1,232 +1,248 @@
-
- 
- *{ margin: 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --fundo: #dbeeff;                    
+    --titulo: #0a3c72;       
+    --subtitulo: #335384;     
+    --texto: #64748b;        
+    --borda: #cbd5e1;     
+    --borda2: #003366;      
+    --botao-principal: #002b66;    
+    --botao: #001f4d;  
+    --botao-texto: #003366; 
+    --link: #4a779d;         
+    --sombra: rgba(0, 0, 0, 0.05); 
+}
+
+body {
     display: flex;
-    min-height: 90vh;
-    background-color: #cad6e6;
-    color: #010102;
-    position: relative;
-    overflow-x: hidden;
-  }
-  
-  header {
-    width: 80%;
-    padding: 70px 80px 600px 60px;
+    min-height: 100vh;
+    background-color: var(--fundo);
+    color: var(--titulo);
+}
+
+header {
+    width: 45%;
+    padding: 60px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-  }
-  
-  header h1 {
-    font-size: 2.0rem;
-    font-weight: 600;
-    color: #030303;
-    margin-bottom: 15px;
-  }
-  
-  header h2 {
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: #6c9de0;
-    margin-bottom: 25px;
+    justify-content: center;
     position: relative;
-  }
-  
-  header h2::after {
-    content: 8px;
-    display: block;
-    width: 60px;
-    height: 2px;
-    background-color: #a8dadc;
-    margin-top: 16px;
-  }
-  
-  header p {
-    font-size: 1rem;
-    line-height: 1.4;
-    color: #1d3557;
-    max-width: 280px;
-    margin-bottom: 40px;
-  }
+}
 
-  header img {
-    max-width: 150px;
-    height: auto;
-    margin-top: auto;
-  }
-  
-  main {
-    width: 65%;
-    background-color: #ffff;
-    border-top-left-radius: 12%;
-    border-bottom-left-radius: 25px;
-    padding: 100px 80px;
+header p:nth-child(1) {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--titulo);
+    margin-bottom: 8px;
+}
+
+header p:nth-child(2) {
+    font-size: 1.5rem;
+    color: var(--subtitulo);
+    margin-bottom: 30px;
+}
+
+
+header p:nth-child(3) {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--subtitulo);
+    max-width: 300px;
+}
+
+
+main {
+    width: 55%;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.05);
-    position: relative;
-  }
-  
-  main h1 {
+    justify-content: center;
+}
+
+
+main img {
+    max-width: 350px;
+    margin-bottom: 10px;
+}
+
+
+main > p:nth-of-type(1) {
     font-size: 1.6rem;
-    color: #031b4e;
-    margin-bottom: 35px;
-    width: 60%;
-    max-width: 330px;
-    text-align: left;
-  }
-  
-  form {
+    font-weight: 700;
+    color: var(--titulo);
+    margin-bottom: 30px;
+}
+
+
+form {
     width: 100%;
-    max-width: 360px;
-  }
-  
-  form p {
-    margin-bottom: 25px;
-  }
-  
-  form label {
+    max-width: 380px;
+    text-align: center;
+    color: var(--titulo);
     font-size: 0.9rem;
+}
+
+form p label {
     font-weight: 600;
-    color: #031b4e;
-  }
-  
-  form input {
+    color: var(--titulo);
+    display: block;
+    text-align: left;
+}
+
+form input[type="email"],form input[type="password"] {
     width: 100%;
-    padding: 12px 1px;
-    border: 1px solid #d0d7de;
-    border-radius: 8px;
-    font-size: 0.95rem;
+    padding: 12px 16px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
     margin-bottom: 15px;
-    outline: none;
-  }
-  
-  form input:focus {
-    border-color: #031b4e;
-  }
-  
-  form p:has(a) {
-    text-align: right;
-    margin-top: -5px;
-    margin-bottom: 20px;
-  }
-  
-  form a {
-    color: #031b4e;
-    font-size: 0,95rem;
-    text-decoration: none;
-  }
-  
-  form a:hover {
-    text-decoration: underline;
-  }
-  
-  form button[type="submit"] {
+    transition: 0.2s ease, 0.2s ease,  0.2s ease;
+}
+
+
+
+form p a {
+    color: var(--link);
+    font-size: 0.70rem;
+}
+
+
+form button[type="submit"] {
     width: 100%;
-    padding: 15px;
-    background-color: #031b4e;
+    padding: 14px;
+    background-color: var(--botao-principal);
     color: #ffffff;
     border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  form button[type="submit"]:hover {
-    background-color: #000f30;
-  }
-  
-  main > p:has(a[href="cadastro.html"]) {
-    width: 100%;
-    max-width: 370px;
-    margin-top: 25px;
-    position: relative;
-    text-align: center;
-  }
-  
-  main > p:has(a[href="cadastro.html"])::before {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #e1e4e8;
-  }
-  
-  main a[href="cadastro.html"] {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-  }
-  
-  main a[href="cadastro.html"] button {
-    width: 100%;
-    padding: 13px;
-    background-color: #ffffff;
-    color: #031b4e;
-    border: 1px solid #031b4e;
-    border-radius: 13px;
+    border-radius: 10px;
     font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  main a[href="cadastro.html"] button:hover {
-    background-color: #f0f4f9;
-  }
-  
-  main > button {
-    position: absolute;
-    right:  20px;
-    bottom: 30px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: #0099ff;
-    color: transparent;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-  
+    margin-bottom: 10px;
+    transition:  0.2s ease,  0.2s ease, 0.2s ease;
+    
+}
 
-  footer {
+form button[type="submit"]:hover {
+    transform: scale(1.03);  
+}
+
+
+form[action="cadastro.html"] {
+    margin-top: 10px;
+}
+
+
+form[action="cadastro.html"] button[type="submit"] {
+    background-color: transparent;
+    color: var(--botao);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 0.95rem;
+    transition: 0.2s ease, 0.2s ease, 0.2s ease;
+}
+
+form[action="cadastro.html"] button[type="submit"]:hover {
+    transform: scale(1.03); 
+}
+
+
+footer {
     position: absolute;
     bottom: 20px;
-    left: 1270px;
+    left: 40px;
     font-size: 0.85rem;
-    color: #1d3557;
-  }
-  
-  footer a {
-    color: #0056b3;
-    font-weight: 700;
+    color: var(--subtitulo);
+}
+
+footer a {
+    color: var(--borda2);
+    font-weight: bold;
     text-decoration: none;
-  }
-  
-  footer a:hover {
+}
+
+footer a:hover {
     text-decoration: underline;
-  }
-  main > p button {
-    background-color: #0099ff;
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 0.70rem;
-    position: absolute;
-    right: 35px;
-    bottom: 35px;
-  }
+}
+
+.erro {
+    display: block;
+    text-align: left;
+    font-size: 0.75rem;
+    color: #c0392b;
+    margin-top: -10px;
+    margin-bottom: 12px;
+    min-height: 14px;
+}
+
+form input.invalido {
+    border-color: #c0392b;
+    background-color: #fdf2f2;
+}
+
+form input.valido {
+    border-color: #2e9e5b;
+    background-color: #f4fdf7;
+}
+
+form button[type="submit"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none ;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    header {
+        width: 100%;
+        padding: 30px 20px 20px 20px;
+        text-align: center;
+    }
+
+    header p:nth-child(3) {
+        max-width: 100%;
+    }
+
+    main {
+        width: 100%;
+        padding: 20px 20px 80px 20px;
+        border-radius: 20px 20px 0 0; 
+    }
+
+    main img {
+        max-width: 220px; 
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    main > p button {
+        position: fixed;
+        right: 15px;
+        bottom: 60px;
+        z-index: 99;
+    }
+
+  
+    footer {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: var(--fundo);
+    }
+}
+ 
+ 

@@ -9,7 +9,7 @@ body {
     display: flex;
     min-height: 100vh;
     background-color: #dce9f9;
-    transition: 0.3s ease;
+    transition:  0.3s ease;
 }
 
 .sidebar {
@@ -21,7 +21,7 @@ body {
     padding: 20px 0;
     gap: 25px;
     flex-shrink: 0;
-    transition: 0.3s ease;
+    transition:  0.3s ease;
 }
 
 .sidebar img {
@@ -59,7 +59,7 @@ body {
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition:  0.2s ease;
 }
 
 .btn-modo-escuro:hover {
@@ -75,44 +75,42 @@ body {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition:  0.2s ease;
 }
 
 .btn-voltar:hover {
     background-color: #eef3fb;
 }
 
-/* MAIN AJUSTADO PARA EMPILHAR OS ELEMENTOS */
+
 main {
     padding: 30px 40px;
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* Garante que os cards ocupem 100% da largura */
-    gap: 25px;            /* Espaçamento vertical entre os elementos */
-    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 main h1 {
     font-size: 26px;
     font-weight: 700;
     color: #1a2a5e;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
-/* CARDS CONFIGURADOS PARA OCUPAR LARGURA TOTAL EM BLOCO */
+
 .card {
     background-color: #ffffff;
-    display: block;
-    width: 100%;
+    display: inline-block;
     border-radius: 14px;
     padding: 20px;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-    transition: 0.3s ease;
+    transition:  0.3s ease;
 }
 
-/* TABELA DENTRO DO CARD EXPANDIDA */
+
 table {
-    width: 100%;
+
     border-collapse: collapse;
 }
 
@@ -146,11 +144,11 @@ tbody td:first-child {
     color: #1a2a5e;
 }
 
-/* CARD DO GRÁFICO EMPILHADO */
+
 .card-grafico {
     display: block;
     width: 100%;
-    max-width: none;
+    max-width: 900px;
 }
 
 .grafico-header {
@@ -214,7 +212,7 @@ tbody td:first-child {
     text-anchor: middle;
 }
 
-/* TEMA ESCURO */
+
 body.dark-theme {
     background-color: #0f1729;
 }
@@ -254,7 +252,7 @@ body.dark-theme .btn-voltar:hover {
     background-color: #d5dbea;
 }
 
-/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
